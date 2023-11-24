@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* Montserrat - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-font: 'Montserrat', sans-serif;
+
+    --collor01: #0D0D0D;
+    --collor02: #404040;
+    --collor03: #737373;
+    --collor04: #BFBFBF;
+    --collor05: #F2F2F2;
+    --collor05-1: #f2f2f2e6;
+}
+
+* {
+    font-family: var(--primary-font);
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--collor02);  
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main div {
+    width: 70%;
+    height: 60%;
+    max-width: 580px;
+
+    background-color: var(--collor04);
+    border-radius: 10px;
+    padding: 2em 2em 4em 2em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main div h1 {
+    color: var(--collor05);
+    text-shadow: 1px 1px 2px black;
+    margin: 0.8em 0.5em;
+}
+
+main div form {
+    background-color: var(--collor05-1);
+    height: 80%;
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main div form [type="submit"], main div form [type="number"], main div form button {
+    width: 95%;
+}
+
+main div p {
+    margin-top: 1em;
+}
