@@ -26,13 +26,13 @@ $converted_quantity = $currency_amount / $price;
     <main>
         <div>
             <h1>Conversor</h1>
-            <form action="" method="get">
+            <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
                 <label for="amount_currency">Insira a Quantidade de Reais para Conversão: </label>
-                <input type="number" name="amount_currency" id="amount_currency" value="<?php echo $currency_amount ?>" step="0.01">
+                <input type="number" name="amount_currency" id="amount_currency" value="<?= $currency_amount ?>" step="0.01">
                 <input type="submit" value="Converter">
                 <p>
-                    <?php echo numfmt_format_currency($currency_pattern, $currency_amount, "BRL") ?> equivalem à <strong><?php echo numfmt_format_currency($currency_pattern, $converted_quantity, "USD") ?></strong> conforme contação de <?php echo numfmt_format_currency($currency_pattern, $price, "USD") ?> para cada Real(BRL), obtida em <?php echo date ('d / m / Y', strtotime($date)) ?> por meio do <a href="https://www.bcb.gov.br/"><strong>Banco Central do Brasil</strong></a>
-                    Conversão realizada em: <?php echo date ('d / m / Y') ?> às <?php echo date ('H:i')?>.
+                    <?= numfmt_format_currency($currency_pattern, $currency_amount, "BRL") ?> equivalem à <strong><?= numfmt_format_currency($currency_pattern, $converted_quantity, "USD") ?></strong> conforme contação de <?= numfmt_format_currency($currency_pattern, $price, "USD") ?> para cada Real(BRL), obtida em <?= date ('d / m / Y', strtotime($date)) ?> por meio do <a href="https://www.bcb.gov.br/"><strong>Banco Central do Brasil</strong></a>
+                    Conversão realizada em: <?= date ('d / m / Y') ?> às <?= date ('H:i')?>.
                 </p>
             </form>
         </div>
